@@ -7,13 +7,13 @@ string[] array =
  
 var result = new string[array.Length];
 var realSize = 0;
-foreach (var value in array)
-{
-    if (value.Length <= 3)
+for(int i=0; i<array.Length; i++)
     {
-        result[realSize] = value;
-        realSize++;
+       if (array[i].Length <= 3)
+       {
+          result[realSize] = array[i];
+          realSize++;
+       }
     }
-}
  
- Console.WriteLine(string.Join(",", result, 0, realSize));
+ Console.WriteLine(string.Join(", ", result, 0, realSize));
